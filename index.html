@@ -9,6 +9,7 @@
     
 ></script>
 <!---------------------------------------------------------------------------------------------------->
+<!-- gombok helyzete -->
 <style>
     #matek{
         position: absolute;
@@ -41,17 +42,7 @@
     left: 59% ;
 
    }
-   .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-
-
-}
+   
 </style> 
 <!---------------------------------------------------------------------------------------------------->
 <body>
@@ -104,9 +95,22 @@
  
 <!---------------------------------------------------------------------------------------------------->
     <div>
-   <img src="e-education.jpg" id="edu" class="noselect" > 
-  <img src="e-education1.jpg" id="educ"class="noselect">
+   <img src="e-education (2).jpg" id="edu" class="noselect" > 
+  <img src="e-education (1).jpg" id="educ"class="noselect">
 </div>
+<!---------------------------------------------------------------------------------------------------->
+<!-- hogy ne tudják megfogni a képeket -->
+<script>
+    
+    document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+        });
+</script>
 <!---------------------------------------------------------------------------------------------------->
 </body>
 </html>
