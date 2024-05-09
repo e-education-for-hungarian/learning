@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lehetőségek</title>
+    <title>e-education</title>
 </head>
-
+<script src="puceralmos.js"
+    
+></script>
+<!---------------------------------------------------------------------------------------------------->
 <style>
     #matek{
         position: absolute;
@@ -26,10 +29,20 @@
     #grade{
         position: absolute;
         left: 47%;
-        top: 32%;
-    }
-</style> 
+        top: 32%;  
+   }
+   #edu{
+    position:absolute;
+    
+    left: 10%;
+   }
+   #educ{
+    position: absolute;
+    left: 59% ;
 
+   }
+</style> 
+<!---------------------------------------------------------------------------------------------------->
 <body>
     <button id="grade" onclick="showMoreButtons()">8th Grade</button>
     <br>
@@ -40,18 +53,18 @@
     <button hidden id="töri" onclick="redirectToPage('history')">Történelem</button>
     <br>
     <button hidden id="nyelvtan" onclick="redirectToPage('hungarian')">Magyar</button>
-
+<!---------------------------------------------------------------------------------------------------->
     <script>
         function redirectToPage(option) {
             switch (option) {
                 case 'math':
-                    window.location.href = 'https://www.google.com/';
+                    window.location.href = 'http://127.0.0.1:5500/index2.html';
                     break;
                 case 'history':
-                    window.location.href = 'https://example.com/history';
+                    window.location.href = 'http://127.0.0.1:5500/index3.html';
                     break;
                 case 'hungarian':
-                    window.location.href = 'https://example.com/hungarian';
+                    window.location.href = 'http://127.0.0.1:5500/index%204.html';
                     break;
                 default:
                     alert('Invalid option selected.');
@@ -77,5 +90,13 @@
         }
         
     </script>
+ 
+<!---------------------------------------------------------------------------------------------------->
+    <div>
+   <img src="e-education.jpg" id="edu" class="noselect" > 
+  <img src="e-education1.jpg" id="educ"class="noselect">
+</div>
+<!---------------------------------------------------------------------------------------------------->
 </body>
 </html>
+

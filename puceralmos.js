@@ -1,3 +1,1 @@
-function elrejt() {
-    document.getElementById("lehetosegek").style.display = "none";
-}
+body.style.backgroundColor = "lightblue";
