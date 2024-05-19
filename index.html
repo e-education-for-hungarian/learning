@@ -3,115 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-education</title>
+    <title>calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<script src="puceralmos.js"
-    
-></script>
-<!---------------------------------------------------------------------------------------------------->
-<!-- gombok helyzete -->
-<style>
-    #matek{
-        position: absolute;
-        left: 52%;
-        top:39%;
-    }
-
-    #töri{
-        position: absolute;
-        top:39%;
-        left:41.5%;
-    }   
-    #nyelvtan{
-        position: absolute;
-        left:47.5%;
-        top:39%;
-    }
-    #grade{
-        position: absolute;
-        left: 47%;
-        top: 32%;  
-   }
-   #edu{
-    position:absolute;
-    
-    left: 7%;
-   }
-   #educ{
-    position: absolute;
-    left: 59% ;
-
-   }
-   
-</style> 
-<!---------------------------------------------------------------------------------------------------->
 <body>
-    <button id="grade" onclick="showMoreButtons()">8th Grade</button>
-    <br>
-    <br>
+    <div id="calculator"> 
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+        </div>
+    </div>
 
-    <button  style="display: none;" id="matek"  onclick="redirectToPage('math')">Matematika</button>
-    <br>
-    <button hidden id="töri" onclick="redirectToPage('history')">Történelem</button>
-    <br>
-    <button hidden id="nyelvtan" onclick="redirectToPage('hungarian')">Magyar</button>
-<!---------------------------------------------------------------------------------------------------->
-    <script>
-        function redirectToPage(option) {
-            switch (option) {
-                case 'math':
-                    window.location.href = 'http://127.0.0.1:5500/index2.html';
-                    break;
-                case 'history':
-                    window.location.href = 'http://127.0.0.1:5500/index3.html';
-                    break;
-                case 'hungarian':
-                    window.location.href = 'http://127.0.0.1:5500/index%204.html';
-                    break;
-                default:
-                    alert('Invalid option selected.');
-            }
-        }
-    </script>
-           <script>
-            function showMoreButtons() {
-            
-            const mathButton = document.getElementById('matek');
-            const historyButton = document.getElementById('töri');
-            const hungarianButton = document.getElementById('nyelvtan');
 
-            if (mathButton.style.display === 'none') {
-                mathButton.style.display = 'block';
-                historyButton.style.display = 'block';
-                hungarianButton.style.display = 'block';
-            } else {
-                mathButton.style.display = 'none';
-                historyButton.style.display = 'none';
-                hungarianButton.style.display = 'none';
-            }
-        }
-        
-    </script>
+<script src="index.html"></script>
  
-<!---------------------------------------------------------------------------------------------------->
-    <div>
-   <img src="e-education (2).jpg" id="edu" class="noselect" > 
-  <img src="e-education (1).jpg" id="educ"class="noselect">
-</div>
-<!---------------------------------------------------------------------------------------------------->
-<!-- hogy ne tudják megfogni a képeket -->
-<script>
-    
-    document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
+<script src="calculator.js"> 
 
-        
-        document.addEventListener('dragstart', function (e) {
-            e.preventDefault();
-        });
+
 </script>
-<!---------------------------------------------------------------------------------------------------->
+
 </body>
 </html>
-
